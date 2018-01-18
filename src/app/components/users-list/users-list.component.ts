@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 //services
@@ -10,7 +10,7 @@ import { DataUsersService } from '../../services/data-users.service';
   styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent implements OnInit {
-
+	@Output() usuario = new EventEmitter();
 	users:any[]=[];
 
   constructor( private dataFirebase:DataUsersService ) {
@@ -29,6 +29,11 @@ export class UsersListComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  change(i){
+  	console.log("cambie y soy "+i);
+  	console.log(this.users[i]);
   }
 
 }

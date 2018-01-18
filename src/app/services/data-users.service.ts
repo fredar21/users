@@ -19,7 +19,7 @@ export class DataUsersService {
   		'Content-Type':'aplication-json'
   	});
 
-  	return this.http.post( this.firebaseUser, body,{header} ).map(res=>{
+  	return this.http.post( this.firebaseUser, body ).map(res=>{
   		console.log(res.json());
   		return res.json();
   	})
@@ -30,4 +30,4 @@ export class DataUsersService {
   	return this.http.get( this.firebaseUser ).map(res=>res.json());
   }
 
-}
+  }

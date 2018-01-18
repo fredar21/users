@@ -2,8 +2,8 @@
 	<div class="col">
 
 		<div class="form-group d-inline-block">
-			<select class="form-control btn btn-outline-primary" id="usuarios">
-				<option *ngFor="let user of users"  class="dropdown-item" >{{user.name}}</option>
+			<select #id (change)="change(id.value)" class="form-control btn btn-outline-primary" id="usuarios">
+				<option *ngFor="let user of users; let i=index"  value="{{i}}" class="dropdown-item" >{{user.name}}</option>
 			</select>
 		</div>
 

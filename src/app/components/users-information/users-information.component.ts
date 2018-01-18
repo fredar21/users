@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+//services
+import { DataUsersService } from '../../services/data-users.service';
+
+
 @Component({
   selector: 'app-users-information',
   templateUrl: './users-information.component.html',
@@ -7,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersInformationComponent implements OnInit {
 
-  constructor() { }
+
+	informacion;
+
+  constructor(private firebase:DataUsersService) {
+
+   }
 
   ngOnInit() {
   }
