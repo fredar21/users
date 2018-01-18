@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {NgForm} from '@angular/forms';
 
+//interface
+import { User } from '../../interfaces/user.interface';
+
+//Services
+
+import { DataUsersService } from '../../services/data-users.service';
+
+
 @Component({
   selector: 'app-users-create',
   templateUrl: './users-create.component.html',
@@ -10,13 +18,22 @@ import {NgForm} from '@angular/forms';
 export class UsersCreateComponent implements OnInit {
 
 	 closeResult: string;
-	 users={id:null,name:null,email:null, nickname: null, date: null};
+	 user:User={
+	 	name:"",
+	 	email:"",
+	 	nickname:"",
+	 	date:""
+	 }
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private dataUser: DataUsersService) { }
 
   ngOnInit() {
   }
 
+  registerUser(){
+  	console.log(this.user);
+  	this.dataUser.addUser(this.user).subscribe(data=>{})
+  }
 
    //Modal Window
   open(content) {
