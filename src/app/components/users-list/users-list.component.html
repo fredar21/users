@@ -1,3 +1,11 @@
-<p>
-  users-list works!
-</p>
+<div class="row">
+	<div class="col">
+
+		<div class="form-group d-inline-block">
+			<select class="form-control btn btn-outline-primary" id="usuarios">
+				<option *ngFor="let user of users"  class="dropdown-item" >{{user.name}}</option>
+			</select>
+		</div>
+
+	</div>
+</div>
