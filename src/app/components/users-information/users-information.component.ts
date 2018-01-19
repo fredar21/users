@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 //services
 import { DataUsersService } from '../../services/data-users.service';
@@ -12,13 +12,15 @@ import { DataUsersService } from '../../services/data-users.service';
 export class UsersInformationComponent implements OnInit {
 
 
-	informacion;
+	@Input() information;
 
   constructor(private firebase:DataUsersService) {
-
-   }
+  	}
 
   ngOnInit() {
   }
+
+
+
 
 }

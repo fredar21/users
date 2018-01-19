@@ -4,8 +4,9 @@
     Welcome to {{ title }} Firebase Users!
   </h1>
  
+ <p>{{objeto|json}}</p>
 
  <app-users-create></app-users-create>
- <app-users-list></app-users-list>
- <app-users-information></app-users-information>
+ <app-users-list (usuario)="daticos($event)"></app-users-list>
+ <app-users-information [information]="objeto" ></app-users-information>
 

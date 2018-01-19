@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  mama= "mama donde estan los juguetes";
+  @Output() objeto = new EventEmitter();
+
+  constructor(){}
+  
+  daticos(valor){
+  	this.objeto=valor;
+  	//console.log(this.objeto);
+  	//this.objeto.emit(valor);
+  }
 }

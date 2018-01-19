@@ -17,13 +17,13 @@ import { DataUsersService } from '../../services/data-users.service';
 })
 export class UsersCreateComponent implements OnInit {
 
-	 closeResult: string;
-	 user:User={
-	 	name:"",
-	 	email:"",
-	 	nickname:"",
-	 	date:""
-	 }
+  closeResult: string;
+  user:User={
+    name:"",
+    email:"",
+    nickname:"",
+    date:""
+  }
 
   constructor(private modalService: NgbModal, private dataUser: DataUsersService) { }
 
@@ -36,23 +36,23 @@ export class UsersCreateComponent implements OnInit {
   }
 
    //Modal Window
-  open(content) {
-    this.modalService.open(content).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    })
-    .catch((reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
+   open(content) {
+     this.modalService.open(content).result.then((result) => {
+       this.closeResult = `Closed with: ${result}`;
+     })
+     .catch((reason) => {
+       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+     });
+   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
+   private getDismissReason(reason: any): string {
+     if (reason === ModalDismissReasons.ESC) {
+       return 'by pressing ESC';
+     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+       return 'by clicking on a backdrop';
+     } else {
+       return  `with: ${reason}`;
+     }
+   }
 
-}
+ }
