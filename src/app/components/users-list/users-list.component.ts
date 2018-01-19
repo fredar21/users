@@ -10,7 +10,7 @@ import { DataUsersService } from '../../services/data-users.service';
 	styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent implements OnInit {
-	@Output() usuario = new EventEmitter();
+	@Output() details = new EventEmitter();
 	users:any[]=[];
 
 	constructor( private dataFirebase:DataUsersService ) {
@@ -34,7 +34,7 @@ export class UsersListComponent implements OnInit {
 	change(i){
 		console.log("cambie y soy "+i);
 		console.log(this.users[i]);
-		this.usuario.emit(this.users[i]);
+		this.details.emit(this.users[i]);
 	}
 
 }
