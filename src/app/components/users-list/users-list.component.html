@@ -1,11 +1,12 @@
-<div class="row">
-	<div class="col">
+<div class="col-12 espaciado centrar">
 
 		<div class="form-group d-inline-block">
 			<select #id (change)="change(id.value)" class="form-control btn btn-outline-primary" id="usuarios">
+				<option  class="dropdown-item"> Seleccione</option>
 				<option *ngFor="let user of users; let i=index"  value="{{i}}" class="dropdown-item" >{{user.name}}</option>
 			</select>
 		</div>
 
 	</div>
-</div>
+
+

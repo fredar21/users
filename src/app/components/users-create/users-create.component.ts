@@ -32,7 +32,11 @@ export class UsersCreateComponent implements OnInit {
 
   registerUser(){
   	console.log(this.user);
-  	this.dataUser.addUser(this.user).subscribe(data=>{})
+  	this.dataUser.addUser(this.user).subscribe(data=>{});
+    this.user.name="";
+    this.user.email="";
+    this.user.nickname="";
+    this.user.date="";
   }
 
    //Modal Window

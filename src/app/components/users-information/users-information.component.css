@@ -1,0 +1,11 @@
+img{
+	width: 250px; 
+	height: 250px;
+}
+.espaciado{
+	padding: 20px;
+}
+.centrar{
+	position: relative;
+	margin: 0 auto;
+}

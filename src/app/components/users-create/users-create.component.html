@@ -1,3 +1,20 @@
+<nav class="navbar sticky-top navbar-toggleable-md bg-inverse"> 
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <h1 class="navbar-brand white">Usuarios Firebase</h1>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+
+    <button class="btn white btn-outline-primary" (click)="open(content)">Registrar Usuario</button>
+  </div>
+</nav>
+
+
+
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
     <h4 class="modal-title">Registro de Usuarios</h4>
@@ -32,5 +49,3 @@
   <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Cerrar</button>
 </div>
 </ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Registrar Usuario</button>

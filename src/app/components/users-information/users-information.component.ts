@@ -3,6 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 //services
 import { DataUsersService } from '../../services/data-users.service';
 
+//interface
+import { User } from '../../interfaces/user.interface';
+
 
 @Component({
   selector: 'app-users-information',
@@ -12,10 +15,9 @@ import { DataUsersService } from '../../services/data-users.service';
 export class UsersInformationComponent implements OnInit {
 
 
-	@Input() information;
+	@Input() information:User={name:" ", email: "", nickname:" ", date: ""};
 
-  constructor(private firebase:DataUsersService) {
-  	}
+  constructor(private firebase:DataUsersService) {}
 
   ngOnInit() {
   }
