@@ -9,7 +9,9 @@ export class AppComponent {
 
   @Output() exchange;
 
-  constructor(){}
+  constructor(){
+  	this.exchange={name:" ", email: "", nickname:" ", date: ""};
+  }
   
   dataDetails(data){
   	this.exchange=data;

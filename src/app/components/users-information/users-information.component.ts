@@ -15,9 +15,11 @@ import { User } from '../../interfaces/user.interface';
 export class UsersInformationComponent implements OnInit {
 
 
-	@Input() information:User={name:" ", email: "", nickname:" ", date: ""};
+	@Input() information:User;
 
-  constructor(private firebase:DataUsersService) {}
+  constructor(private firebase:DataUsersService) {
+  		
+  }
 
   ngOnInit() {
   }
